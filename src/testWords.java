@@ -3,25 +3,7 @@ import static org.junit.Assert.assertEquals;
 
 public class testWords {
 
-    @Test
-
-    public void testGetRows() {
-
-        //Arrange
-        String charWord = "hej";
-        theWordsEngine myRows = new theWordsEngine();
-
-        //Act
-        myRows.setRowCounter();
-        int actual = myRows.getRowCounter();
-
-
-        //Assert
-        int expected = 1;
-        assertEquals(expected, actual);
-    }
-
-    @Test
+    @Test       //Testar hur antalet tecken i ordet.
 
     public void testGetCharacters() {
 
@@ -40,7 +22,7 @@ public class testWords {
         System.out.println(actual);
     }
 
-    @Test       //Testar om ordet "stop" blir 'false' och stoppar loopen
+    @Test       //Testar om ordet "stop" blir 'false' och stoppar loopen.
 
     public void testSetFalseStop() {
 
@@ -56,7 +38,7 @@ public class testWords {
         assertEquals(expected, actual);
     }
 
-    @Test       //Testar om ordet "hej" blir 'true' får loopen att fortsätta
+    @Test       //Testar om ordet "hej" blir 'true' får loopen att fortsätta.
 
     public void testSetTrueStop() {
 
@@ -70,5 +52,23 @@ public class testWords {
         //Assert
         boolean expected = true;
         assertEquals(expected, actual);
+    }
+
+    @Test       //Testar längsta ordet.
+
+    public void testTheLongestWord() {
+
+        //Arrange
+        theWordsEngine myChars = new theWordsEngine();
+
+        //Act
+        myChars.setCharCounter("Hej på dig din gamle galosch");
+        String actual = myChars.getLongestWord();
+
+
+        //Assert
+        String expected = "galosch";
+        assertEquals(expected, actual);
+        System.out.println(actual);
     }
 }

@@ -16,6 +16,8 @@ public class theWordsMain {
             input = s1.nextLine().toLowerCase(Locale.ROOT);
         }
         System.out.println("Du skrev " + aWord.getCharCounter() +
-                " tecken på " + aWord.getRowCounter() + " rader.");
+                " tecken på " + aWord.getRowCounter() + " rader,  " +
+                aWord.getWordCounter() + " ord och det längsta ordet var "
+                + aWord.getLongestWord());
     }
 }
